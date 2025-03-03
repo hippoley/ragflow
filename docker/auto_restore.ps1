@@ -158,7 +158,10 @@ foreach ($volume in $volumesToRestore) {
         try {
             # Create a temporary container to check if volume is empty
             $volumeMount = "$volume" + ":/source"
-            $checkResult = docker run --rm -v "$volumeMount" alpine sh -c "[ -z \"\$(ls -A /source)\" ] && echo 'empty' || echo 'not-empty'"
+            # Store the shell command in a variable to avoid PowerShell alias detection
+            $shellCommand = '[ -z "$(ls -A /source)" ] && echo "empty" || echo "not-empty"'
+            # Use the variable in the docker run command
+            $checkResult = docker run --rm -v "$volumeMount" alpine sh -c $shellCommand
             $isEmpty = $checkResult -eq "empty"
         } catch {
             Write-Log "Error checking if volume is empty." "Red"
@@ -202,7 +205,10 @@ foreach ($volume in $volumesToRestore) {
     try {
         $volumeMount = "$volume" + ":/destination" 
         $backupMount = "$latestBackup" + ":/backup.tar.gz"
-        docker run --rm -v "$volumeMount" -v "$backupMount" alpine sh -c "rm -rf /destination/* && tar -xzf /backup.tar.gz -C /destination"
+        # Store the shell command in a variable to avoid PowerShell alias detection
+        $restoreCommand = 'rm -rf /destination/* && tar -xzf /backup.tar.gz -C /destination'
+        # Use the variable in the docker run command
+        docker run --rm -v "$volumeMount" -v "$backupMount" alpine sh -c $restoreCommand
         
         if ($LASTEXITCODE -eq 0) {
             Write-Log "Successfully restored $volume" "Green"

@@ -521,14 +521,20 @@ class ESConnection(DocStoreConnection):
         sql = sql.replace("%", "")
         replaces = []
         for r in re.finditer(r" ([a-z_]+_l?tks)( like | ?= ?)'([^']+)'", sql):
-            fld, v = r.group(1), r.group(3)
-            match = " MATCH({}, '{}', 'operator=OR;minimum_should_match=30%') ".format(
-                fld, rag_tokenizer.fine_grained_tokenize(rag_tokenizer.tokenize(v)))
+            fld, op, v = r.group(1), r.group(2), r.group(3)
+            
+            # 特殊处理titlev2_tks字段
+            if "titlev2_tks" in fld:
+                match = " MATCH({}, '{}', 'operator=OR;minimum_should_match=30%') ".format(fld, v)
+            else:
+                match = " MATCH({}, '{}', 'operator=OR;minimum_should_match=30%') ".format(
+                    fld, rag_tokenizer.fine_grained_tokenize(rag_tokenizer.tokenize(v)))
+            
             replaces.append(
                 ("{}{}'{}'".format(
-                    r.group(1),
-                    r.group(2),
-                    r.group(3)),
+                    fld,
+                    op,
+                    v),
                  match))
 
         for p, r in replaces:

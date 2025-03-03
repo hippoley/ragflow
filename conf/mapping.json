@@ -75,7 +75,13 @@
             "type": "text",
             "similarity": "scripted_sim",
             "analyzer": "whitespace",
-            "store": true
+            "store": true,
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
           }
         }
       },

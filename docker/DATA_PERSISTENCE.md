@@ -80,6 +80,8 @@ cd D:\Hippo\PycharmProjects\RAGFLOW\ragflow\docker>
 .\docker_startup.ps1 restart
 ```
 
+如果是其中单一的容器：docker compose -p ragflow restart ragflow-service
+
 此命令将执行：
 1. 备份当前数据
 2. 停止容器

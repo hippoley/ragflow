@@ -1,8 +1,14 @@
 import { Input } from '@/components/ui/input';
-import { Sheet, SheetContent, SheetHeader } from '@/components/ui/sheet';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+} from '@/components/ui/sheet';
 import { useTranslate } from '@/hooks/common-hooks';
 import { IModalProps } from '@/interfaces/common';
 import { RAGFlowNodeType } from '@/interfaces/database/flow';
+import { cn } from '@/lib/utils';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { get, isPlainObject, lowerFirst } from 'lodash';
 import { Play, X } from 'lucide-react';
@@ -88,9 +94,10 @@ const FormSheet = ({
 
   return (
     <Sheet open={visible} modal={false}>
-      <SheetContent className="bg-white top-20" closeIcon={false}>
+      <SheetTitle className="hidden"></SheetTitle>
+      <SheetContent className={cn('bg-white top-20 p-0')} closeIcon={false}>
         <SheetHeader>
-          <section className="flex-col border-b pb-2">
+          <section className="flex-col border-b py-2 px-5">
             <div className="flex items-center gap-2 pb-3">
               <OperatorIcon
                 name={operatorName}

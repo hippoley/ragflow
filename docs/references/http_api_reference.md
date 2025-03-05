@@ -5,7 +5,7 @@ slug: /http_api_reference
 
 # HTTP API
 
-A complete reference for RAGFlow's RESTful API. Before proceeding, please ensure you [have your RAGFlow API key ready for authentication](https://ragflow.io/docs/dev/acquire_ragflow_api_key).
+A complete reference for RAGFlow's RESTful API. Before proceeding, please ensure you [have your RAGFlow API key ready for authentication](../guides/models/llm_api_key_setup.md).
 
 ---
 
@@ -634,6 +634,7 @@ Updates configurations for a specified document.
   - `'Authorization: Bearer <YOUR_API_KEY>'`
 - Body:
   - `"name"`:`string`
+  - `"meta_fields"`:`object`
   - `"chunk_method"`:`string`
   - `"parser_config"`:`object`
 
@@ -660,6 +661,7 @@ curl --request PUT \
 - `document_id`: (*Path parameter*)  
   The ID of the document to update.
 - `"name"`: (*Body parameter*), `string`
+- `"meta_fields"`: (*Body parameter*)， `dict[str, Any]` The meta fields of the document.
 - `"chunk_method"`: (*Body parameter*), `string`  
   The parsing method to apply to the document:  
   - `"naive"`: General
@@ -672,8 +674,6 @@ curl --request PUT \
   - `"presentation"`: Presentation
   - `"picture"`: Picture
   - `"one"`: One
-  - `"knowledge_graph"`: Knowledge Graph  
-    Ensure your LLM is properly configured on the **Settings** page before selecting this. Please also note that Knowledge Graph consumes a large number of Tokens!
   - `"email"`: Email
 - `"parser_config"`: (*Body parameter*), `object`  
   The configuration settings for the dataset parser. The attributes in this JSON object vary with the selected `"chunk_method"`:  
@@ -2912,6 +2912,62 @@ Failure:
 }
 ```
 
+---
+
+### Delete agent's sessions
+
+**DELETE** `/api/v1/agents/{agent_id}/sessions`
+
+Deletes sessions of a agent by ID.
+
+#### Request
+
+- Method: DELETE
+- URL: `/api/v1/agents/{agent_id}/sessions`
+- Headers:
+  - `'content-Type: application/json'`
+  - `'Authorization: Bearer <YOUR_API_KEY>'`
+- Body:
+  - `"ids"`: `list[string]`
+
+##### Request example
+
+```bash
+curl --request DELETE \
+     --url http://{address}/api/v1/agents/{agent_id}/sessions \
+     --header 'Content-Type: application/json' \
+     --header 'Authorization: Bearer <YOUR_API_KEY>' \
+     --data '
+     {
+          "ids": ["test_1", "test_2"]
+     }'
+```
+
+##### Request Parameters
+
+- `agent_id`: (*Path parameter*)  
+  The ID of the associated agent.
+- `"ids"`: (*Body Parameter*), `list[string]`  
+  The IDs of the sessions to delete. If it is not specified, all sessions associated with the specified agent will be deleted.
+
+#### Response
+
+Success:
+
+```json
+{
+    "code": 0
+}
+```
+
+Failure:
+
+```json
+{
+    "code": 102,
+    "message": "The agent doesn't own the session cbd31e52f73911ef93b232903b842af6"
+}
+```
 ---
 
 ## AGENT MANAGEMENT

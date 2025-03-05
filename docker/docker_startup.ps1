@@ -192,4 +192,27 @@ switch ($action) {
     }
 }
 
+# 查找占用 6379 端口的进程
+Write-Log "Checking for processes using port 6379..." "Cyan"
+$processes = netstat -ano | findstr :6379
+
+if ($processes) {
+    Write-Log "Found processes using port 6379:" "Yellow"
+    Write-Host $processes
+    
+    # 提取进程ID
+    $processIds = $processes | ForEach-Object {
+        if ($_ -match ".*:6379.*LISTENING\s+(\d+)") {
+            $matches[1]
+        }
+    }
+    
+    foreach ($pid in $processIds) {
+        Write-Log "Attempting to kill process with PID: $pid" "Yellow"
+        taskkill /PID $pid /F
+    }
+} else {
+    Write-Log "No processes found using port 6379" "Green"
+}
+
 exit 0 

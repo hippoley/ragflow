@@ -11799,3 +11799,274 @@ peewee.OperationalError: (2003, "Can't connect to MySQL server on 'mysql' ([Errn
 2025-03-03 15:52:48,278 INFO     19 172.18.0.6 - - [03/Mar/2025 15:52:48] "GET /v1/document/thumbnails?doc_ids=668af1d0f7cc11efac140242ac120006 HTTP/1.1" 200 -
 2025-03-03 15:52:48,278 INFO     19 172.18.0.6 - - [03/Mar/2025 15:52:48] "GET /v1/document/thumbnails?doc_ids=6acd6bbaf68711efb3030242ac120006 HTTP/1.1" 200 -
 2025-03-03 15:52:48,360 INFO     19 172.18.0.6 - - [03/Mar/2025 15:52:48] "GET /v1/document/image/d8fa77c8f67211efbb120242ac120006-thumbnail_6acd6bbaf68711efb3030242ac120006.png HTTP/1.1" 200 -
+2025-03-04 16:33:04,748 INFO     20 ragflow_server log path: /ragflow/logs/ragflow_server.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-03-04 16:33:40,138 INFO     20 init database on cluster mode successfully
+2025-03-04 16:34:51,246 INFO     25 ragflow_server log path: /ragflow/logs/ragflow_server.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-03-04 16:35:14,656 INFO     25 init database on cluster mode successfully
+2025-03-04 16:35:38,797 INFO     25 
+        ____   ___    ______ ______ __               
+       / __ \ /   |  / ____// ____// /____  _      __
+      / /_/ // /| | / / __ / /_   / // __ \| | /| / /
+     / _, _// ___ |/ /_/ // __/  / // /_/ /| |/ |/ / 
+    /_/ |_|/_/  |_|\____//_/    /_/ \____/ |__/|__/                             
+
+    
+2025-03-04 16:35:38,801 INFO     25 RAGFlow version: v0.17.0 slim
+2025-03-04 16:35:38,803 INFO     25 project base: /ragflow
+2025-03-04 16:35:38,804 INFO     25 Current configs, from /ragflow/conf/service_conf.yaml:
+	ragflow: {'host': '0.0.0.0', 'http_port': 9380}
+	mysql: {'name': 'rag_flow', 'user': 'root', 'password': '********', 'host': 'mysql', 'port': 3306, 'max_connections': 100, 'stale_timeout': 30}
+	minio: {'user': 'rag_flow', 'password': '********', 'host': 'minio:9000'}
+	es: {'hosts': 'http://es01:9200', 'username': 'elastic', 'password': '********'}
+	infinity: {'uri': 'infinity:23817', 'db_name': 'default_db'}
+	redis: {'db': 1, 'password': '********', 'host': 'redis:6379'}
+2025-03-04 16:35:38,805 INFO     25 Use Elasticsearch http://es01:9200 as the doc engine.
+2025-03-04 16:35:39,196 INFO     25 GET http://es01:9200/ [status:200 duration:0.387s]
+2025-03-04 16:35:39,212 INFO     25 HEAD http://es01:9200/ [status:200 duration:0.013s]
+2025-03-04 16:35:39,217 INFO     25 Elasticsearch http://es01:9200 is healthy.
+2025-03-04 16:35:39,227 WARNING  25 Load term.freq FAIL!
+2025-03-04 16:35:39,234 WARNING  25 Realtime synonym is disabled, since no redis connection.
+2025-03-04 16:35:39,239 WARNING  25 Load term.freq FAIL!
+2025-03-04 16:35:39,243 WARNING  25 Realtime synonym is disabled, since no redis connection.
+2025-03-04 16:35:39,245 INFO     25 MAX_CONTENT_LENGTH: 134217728
+2025-03-04 16:35:39,246 INFO     25 SERVER_QUEUE_MAX_LEN: 1024
+2025-03-04 16:35:39,247 INFO     25 SERVER_QUEUE_RETENTION: 3600
+2025-03-04 16:35:39,249 INFO     25 MAX_FILE_COUNT_PER_USER: 0
+2025-03-04 16:35:43,968 INFO     25 init web data success:3.8549680709838867
+2025-03-04 16:35:43,974 INFO     25 RAGFlow HTTP server start...
+2025-03-04 16:35:43,981 INFO     25 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9380
+ * Running on http://172.18.0.6:9380
+2025-03-04 16:35:43,986 INFO     25 [33mPress CTRL+C to quit[0m
+2025-03-05 08:57:31,526 INFO     19 ragflow_server log path: /ragflow/logs/ragflow_server.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-03-05 08:57:49,887 INFO     19 init database on cluster mode successfully
+2025-03-05 08:58:06,992 INFO     19 
+        ____   ___    ______ ______ __               
+       / __ \ /   |  / ____// ____// /____  _      __
+      / /_/ // /| | / / __ / /_   / // __ \| | /| / /
+     / _, _// ___ |/ /_/ // __/  / // /_/ /| |/ |/ / 
+    /_/ |_|/_/  |_|\____//_/    /_/ \____/ |__/|__/                             
+
+    
+2025-03-05 08:58:06,994 INFO     19 RAGFlow version: v0.17.0 slim
+2025-03-05 08:58:06,995 INFO     19 project base: /ragflow
+2025-03-05 08:58:06,996 INFO     19 Current configs, from /ragflow/conf/service_conf.yaml:
+	ragflow: {'host': '0.0.0.0', 'http_port': 9380}
+	mysql: {'name': 'rag_flow', 'user': 'root', 'password': '********', 'host': 'mysql', 'port': 3306, 'max_connections': 100, 'stale_timeout': 30}
+	minio: {'user': 'rag_flow', 'password': '********', 'host': 'minio:9000'}
+	es: {'hosts': 'http://es01:9200', 'username': 'elastic', 'password': '********'}
+	infinity: {'uri': 'infinity:23817', 'db_name': 'default_db'}
+	redis: {'db': 1, 'password': '********', 'host': 'redis:6379'}
+2025-03-05 08:58:06,997 INFO     19 Use Elasticsearch http://es01:9200 as the doc engine.
+2025-03-05 08:58:07,134 INFO     19 GET http://es01:9200/ [status:200 duration:0.133s]
+2025-03-05 08:58:07,142 INFO     19 HEAD http://es01:9200/ [status:200 duration:0.006s]
+2025-03-05 08:58:07,144 INFO     19 Elasticsearch http://es01:9200 is healthy.
+2025-03-05 08:58:07,152 WARNING  19 Load term.freq FAIL!
+2025-03-05 08:58:07,155 WARNING  19 Realtime synonym is disabled, since no redis connection.
+2025-03-05 08:58:07,160 WARNING  19 Load term.freq FAIL!
+2025-03-05 08:58:07,163 WARNING  19 Realtime synonym is disabled, since no redis connection.
+2025-03-05 08:58:07,164 INFO     19 MAX_CONTENT_LENGTH: 134217728
+2025-03-05 08:58:07,165 INFO     19 SERVER_QUEUE_MAX_LEN: 1024
+2025-03-05 08:58:07,166 INFO     19 SERVER_QUEUE_RETENTION: 3600
+2025-03-05 08:58:07,167 INFO     19 MAX_FILE_COUNT_PER_USER: 0
+2025-03-05 08:58:11,535 INFO     19 init web data success:3.914599657058716
+2025-03-05 08:58:11,539 INFO     19 RAGFlow HTTP server start...
+2025-03-05 08:58:11,545 INFO     19 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9380
+ * Running on http://172.18.0.6:9380
+2025-03-05 08:58:11,546 INFO     19 [33mPress CTRL+C to quit[0m
+2025-03-05 09:25:31,737 INFO     20 ragflow_server log path: /ragflow/logs/ragflow_server.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-03-05 09:25:42,982 INFO     20 init database on cluster mode successfully
+2025-03-05 09:25:57,041 INFO     20 
+        ____   ___    ______ ______ __               
+       / __ \ /   |  / ____// ____// /____  _      __
+      / /_/ // /| | / / __ / /_   / // __ \| | /| / /
+     / _, _// ___ |/ /_/ // __/  / // /_/ /| |/ |/ / 
+    /_/ |_|/_/  |_|\____//_/    /_/ \____/ |__/|__/                             
+
+    
+2025-03-05 09:25:57,043 INFO     20 RAGFlow version: v0.17.0 slim
+2025-03-05 09:25:57,044 INFO     20 project base: /ragflow
+2025-03-05 09:25:57,046 INFO     20 Current configs, from /ragflow/conf/service_conf.yaml:
+	ragflow: {'host': '0.0.0.0', 'http_port': 9380}
+	mysql: {'name': 'rag_flow', 'user': 'root', 'password': '********', 'host': 'mysql', 'port': 3306, 'max_connections': 100, 'stale_timeout': 30}
+	minio: {'user': 'rag_flow', 'password': '********', 'host': 'minio:9000'}
+	es: {'hosts': 'http://es01:9200', 'username': 'elastic', 'password': '********'}
+	infinity: {'uri': 'infinity:23817', 'db_name': 'default_db'}
+	redis: {'db': 1, 'password': '********', 'host': 'redis:6379'}
+2025-03-05 09:25:57,047 INFO     20 Use Elasticsearch http://es01:9200 as the doc engine.
+2025-03-05 09:25:57,136 INFO     20 GET http://es01:9200/ [status:200 duration:0.087s]
+2025-03-05 09:25:57,144 INFO     20 HEAD http://es01:9200/ [status:200 duration:0.007s]
+2025-03-05 09:25:57,147 INFO     20 Elasticsearch http://es01:9200 is healthy.
+2025-03-05 09:25:57,153 WARNING  20 Load term.freq FAIL!
+2025-03-05 09:25:57,157 WARNING  20 Realtime synonym is disabled, since no redis connection.
+2025-03-05 09:25:57,162 WARNING  20 Load term.freq FAIL!
+2025-03-05 09:25:57,167 WARNING  20 Realtime synonym is disabled, since no redis connection.
+2025-03-05 09:25:57,169 INFO     20 MAX_CONTENT_LENGTH: 134217728
+2025-03-05 09:25:57,170 INFO     20 SERVER_QUEUE_MAX_LEN: 1024
+2025-03-05 09:25:57,171 INFO     20 SERVER_QUEUE_RETENTION: 3600
+2025-03-05 09:25:57,172 INFO     20 MAX_FILE_COUNT_PER_USER: 0
+2025-03-05 09:26:00,359 INFO     20 init web data success:2.997069835662842
+2025-03-05 09:26:00,362 INFO     20 RAGFlow HTTP server start...
+2025-03-05 09:26:00,367 INFO     20 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9380
+ * Running on http://172.18.0.6:9380
+2025-03-05 09:26:00,371 INFO     20 [33mPress CTRL+C to quit[0m
+2025-03-05 09:31:58,407 WARNING  20 load_user got exception Signature b'K6QeQLSJf1criQDYVsykmtQ5s7g' does not match
+2025-03-05 09:31:58,409 ERROR    20 401 Unauthorized: The server could not verify that you are authorized to access the URL requested. You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required.
+Traceback (most recent call last):
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask_login/utils.py", line 285, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask_login/login_manager.py", line 178, in unauthorized
+    abort(401)
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask/helpers.py", line 272, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "/ragflow/.venv/lib/python3.10/site-packages/werkzeug/exceptions.py", line 863, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.Unauthorized: 401 Unauthorized: The server could not verify that you are authorized to access the URL requested. You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required.
+2025-03-05 09:31:58,415 INFO     20 172.18.0.6 - - [05/Mar/2025 09:31:58] "GET /v1/user/info HTTP/1.1" 200 -
+2025-03-05 09:31:59,633 ERROR    20 401 Unauthorized: The server could not verify that you are authorized to access the URL requested. You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required.
+Traceback (most recent call last):
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask_login/utils.py", line 285, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask_login/login_manager.py", line 178, in unauthorized
+    abort(401)
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask/helpers.py", line 272, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "/ragflow/.venv/lib/python3.10/site-packages/werkzeug/exceptions.py", line 863, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.Unauthorized: 401 Unauthorized: The server could not verify that you are authorized to access the URL requested. You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required.
+2025-03-05 09:31:59,637 ERROR    20 401 Unauthorized: The server could not verify that you are authorized to access the URL requested. You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required.
+Traceback (most recent call last):
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask_login/utils.py", line 285, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask_login/login_manager.py", line 178, in unauthorized
+    abort(401)
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask/helpers.py", line 272, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "/ragflow/.venv/lib/python3.10/site-packages/werkzeug/exceptions.py", line 863, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.Unauthorized: 401 Unauthorized: The server could not verify that you are authorized to access the URL requested. You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required.
+2025-03-05 09:31:59,641 ERROR    20 401 Unauthorized: The server could not verify that you are authorized to access the URL requested. You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required.
+Traceback (most recent call last):
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask_login/utils.py", line 285, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask_login/login_manager.py", line 178, in unauthorized
+    abort(401)
+  File "/ragflow/.venv/lib/python3.10/site-packages/flask/helpers.py", line 272, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "/ragflow/.venv/lib/python3.10/site-packages/werkzeug/exceptions.py", line 863, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.Unauthorized: 401 Unauthorized: The server could not verify that you are authorized to access the URL requested. You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required.
+2025-03-05 09:31:59,644 INFO     20 172.18.0.6 - - [05/Mar/2025 09:31:59] "GET /v1/user/info HTTP/1.1" 200 -
+2025-03-05 09:31:59,645 INFO     20 172.18.0.6 - - [05/Mar/2025 09:31:59] "GET /v1/kb/list HTTP/1.1" 200 -
+2025-03-05 09:31:59,647 INFO     20 172.18.0.6 - - [05/Mar/2025 09:31:59] "GET /v1/file/list?parent_id=&keywords=&page_size=10&page=1 HTTP/1.1" 200 -
+2025-03-05 09:32:06,707 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:06] "POST /v1/user/login HTTP/1.1" 200 -
+2025-03-05 09:32:06,902 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:06] "GET /v1/user/info HTTP/1.1" 200 -
+2025-03-05 09:32:06,932 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:06] "GET /v1/kb/list?page=1&page_size=30&keywords= HTTP/1.1" 200 -
+2025-03-05 09:32:06,990 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:06] "GET /v1/user/info HTTP/1.1" 200 -
+2025-03-05 09:32:10,086 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:10] "GET /v1/user/info HTTP/1.1" 200 -
+2025-03-05 09:32:10,093 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:10] "GET /v1/dialog/list HTTP/1.1" 200 -
+2025-03-05 09:32:10,163 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:10] "GET /v1/dialog/get?dialog_id=08ed4ea8f7cf11efa2890242ac120006 HTTP/1.1" 200 -
+2025-03-05 09:32:10,165 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:10] "GET /v1/conversation/list?dialog_id=08ed4ea8f7cf11efa2890242ac120006 HTTP/1.1" 200 -
+2025-03-05 09:32:10,211 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:10] "GET /v1/conversation/get?conversation_id=f40ae3ffcbee4be1b4d111453bdcce14 HTTP/1.1" 200 -
+2025-03-05 09:32:10,505 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:10] "GET /v1/document/thumbnails?doc_ids=668af1d0f7cc11efac140242ac120006 HTTP/1.1" 200 -
+2025-03-05 09:32:10,505 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:10] "GET /v1/document/thumbnails?doc_ids=6acd6bbaf68711efb3030242ac120006 HTTP/1.1" 200 -
+2025-03-05 09:32:10,644 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:10] "GET /v1/document/image/d8fa77c8f67211efbb120242ac120006-thumbnail_6acd6bbaf68711efb3030242ac120006.png HTTP/1.1" 200 -
+2025-03-05 09:32:12,076 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:12] "GET /v1/kb/list HTTP/1.1" 200 -
+2025-03-05 09:32:12,967 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:12] "GET /v1/canvas/list HTTP/1.1" 200 -
+2025-03-05 09:32:12,968 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:12] "GET /v1/canvas/templates HTTP/1.1" 200 -
+2025-03-05 09:32:14,386 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:14] "GET /v1/kb/list HTTP/1.1" 200 -
+2025-03-05 09:32:15,175 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:15] "GET /v1/user/info HTTP/1.1" 200 -
+2025-03-05 09:32:15,176 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:15] "GET /v1/kb/list?page=1&page_size=30&keywords= HTTP/1.1" 200 -
+2025-03-05 09:32:17,497 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:17] "GET /v1/kb/list HTTP/1.1" 200 -
+2025-03-05 09:32:17,519 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:17] "GET /v1/file/list?parent_id=&keywords=&page_size=10&page=1 HTTP/1.1" 200 -
+2025-03-05 09:32:18,823 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:18] "GET /v1/canvas/list HTTP/1.1" 200 -
+2025-03-05 09:32:18,837 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:18] "GET /v1/canvas/templates HTTP/1.1" 200 -
+2025-03-05 09:32:19,416 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:19] "GET /v1/kb/list HTTP/1.1" 200 -
+2025-03-05 09:32:19,893 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:19] "GET /v1/user/info HTTP/1.1" 200 -
+2025-03-05 09:32:19,895 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:19] "GET /v1/dialog/list HTTP/1.1" 200 -
+2025-03-05 09:32:19,943 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:19] "GET /v1/conversation/list?dialog_id=08ed4ea8f7cf11efa2890242ac120006 HTTP/1.1" 200 -
+2025-03-05 09:32:19,943 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:19] "GET /v1/dialog/get?dialog_id=08ed4ea8f7cf11efa2890242ac120006 HTTP/1.1" 200 -
+2025-03-05 09:32:19,983 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:19] "GET /v1/conversation/get?conversation_id=f40ae3ffcbee4be1b4d111453bdcce14 HTTP/1.1" 200 -
+2025-03-05 09:32:20,188 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:20] "GET /v1/document/image/d8fa77c8f67211efbb120242ac120006-thumbnail_6acd6bbaf68711efb3030242ac120006.png HTTP/1.1" 200 -
+2025-03-05 09:32:20,188 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:20] "GET /v1/document/thumbnails?doc_ids=668af1d0f7cc11efac140242ac120006 HTTP/1.1" 200 -
+2025-03-05 09:32:20,188 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:20] "GET /v1/document/thumbnails?doc_ids=6acd6bbaf68711efb3030242ac120006 HTTP/1.1" 200 -
+2025-03-05 09:32:20,434 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:20] "GET /v1/user/info HTTP/1.1" 200 -
+2025-03-05 09:32:20,440 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:20] "GET /v1/kb/list?page=1&page_size=30&keywords= HTTP/1.1" 200 -
+2025-03-05 09:32:29,949 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:29] "GET /v1/user/info HTTP/1.1" 200 -
+2025-03-05 09:32:29,954 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:29] "GET /v1/kb/list?page=1&page_size=30&keywords= HTTP/1.1" 200 -
+2025-03-05 09:32:35,098 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:35] "GET /v1/user/tenant_info HTTP/1.1" 200 -
+2025-03-05 09:32:35,108 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:35] "GET /v1/document/list?kb_id=0ff47884f81011efbe590242ac120006&keywords=&page_size=10&page=1 HTTP/1.1" 200 -
+2025-03-05 09:32:35,108 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:35] "GET /v1/kb/detail?kb_id=0ff47884f81011efbe590242ac120006 HTTP/1.1" 200 -
+2025-03-05 09:32:35,150 INFO     20 HEAD http://es01:9200/ragflow_ca473450f67211efae920242ac120006 [status:200 duration:0.055s]
+2025-03-05 09:32:35,928 INFO     20 POST http://es01:9200/ragflow_ca473450f67211efae920242ac120006/_search [status:200 duration:0.182s]
+2025-03-05 09:32:35,931 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:35] "GET /v1/kb/0ff47884f81011efbe590242ac120006/knowledge_graph HTTP/1.1" 200 -
+2025-03-05 09:32:37,008 INFO     20 POST http://es01:9200/ragflow_ca473450f67211efae920242ac120006/_search [status:200 duration:0.174s]
+2025-03-05 09:32:37,015 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:37] "POST /v1/chunk/list HTTP/1.1" 200 -
+2025-03-05 09:32:39,887 INFO     20 POST http://es01:9200/ragflow_ca473450f67211efae920242ac120006/_search [status:200 duration:0.026s]
+2025-03-05 09:32:39,895 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:39] "POST /v1/chunk/list HTTP/1.1" 200 -
+2025-03-05 09:32:44,028 INFO     20 POST http://es01:9200/ragflow_ca473450f67211efae920242ac120006/_search [status:200 duration:0.021s]
+2025-03-05 09:32:44,036 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:44] "POST /v1/chunk/list HTTP/1.1" 200 -
+2025-03-05 09:32:46,450 INFO     20 POST http://es01:9200/ragflow_ca473450f67211efae920242ac120006/_search [status:200 duration:0.015s]
+2025-03-05 09:32:46,453 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:46] "POST /v1/chunk/list HTTP/1.1" 200 -
+2025-03-05 09:32:47,853 INFO     20 POST http://es01:9200/ragflow_ca473450f67211efae920242ac120006/_search [status:200 duration:0.015s]
+2025-03-05 09:32:47,860 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:47] "POST /v1/chunk/list HTTP/1.1" 200 -
+2025-03-05 09:32:48,850 INFO     20 POST http://es01:9200/ragflow_ca473450f67211efae920242ac120006/_search [status:200 duration:0.015s]
+2025-03-05 09:32:48,858 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:48] "POST /v1/chunk/list HTTP/1.1" 200 -
+2025-03-05 09:32:50,378 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:50] "GET /v1/user/info HTTP/1.1" 200 -
+2025-03-05 09:32:50,383 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:50] "GET /v1/kb/list?page=1&page_size=30&keywords= HTTP/1.1" 200 -
+2025-03-05 09:32:54,220 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:54] "GET /v1/user/tenant_info HTTP/1.1" 200 -
+2025-03-05 09:32:54,223 INFO     20 HEAD http://es01:9200/ragflow_ca473450f67211efae920242ac120006 [status:200 duration:0.005s]
+2025-03-05 09:32:54,254 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:54] "GET /v1/kb/detail?kb_id=d8fa77c8f67211efbb120242ac120006 HTTP/1.1" 200 -
+2025-03-05 09:32:54,255 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:54] "GET /v1/document/list?kb_id=d8fa77c8f67211efbb120242ac120006&keywords=&page_size=10&page=1 HTTP/1.1" 200 -
+2025-03-05 09:32:54,285 INFO     20 POST http://es01:9200/ragflow_ca473450f67211efae920242ac120006/_search [status:200 duration:0.006s]
+2025-03-05 09:32:54,287 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:54] "GET /v1/kb/d8fa77c8f67211efbb120242ac120006/knowledge_graph HTTP/1.1" 200 -
+2025-03-05 09:32:54,307 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:54] "GET /v1/document/image/d8fa77c8f67211efbb120242ac120006-thumbnail_6acd6bbaf68711efb3030242ac120006.png HTTP/1.1" 200 -
+2025-03-05 09:32:56,225 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:56] "GET /v1/user/info HTTP/1.1" 200 -
+2025-03-05 09:32:56,230 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:56] "GET /v1/kb/list?page=1&page_size=30&keywords= HTTP/1.1" 200 -
+2025-03-05 09:32:57,193 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:57] "GET /v1/user/tenant_info HTTP/1.1" 200 -
+2025-03-05 09:32:57,196 INFO     20 HEAD http://es01:9200/ragflow_ca473450f67211efae920242ac120006 [status:200 duration:0.004s]
+2025-03-05 09:32:57,197 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:57] "GET /v1/kb/detail?kb_id=13b9c436f7cc11efa2e20242ac120006 HTTP/1.1" 200 -
+2025-03-05 09:32:57,222 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:57] "GET /v1/document/list?kb_id=13b9c436f7cc11efa2e20242ac120006&keywords=&page_size=10&page=1 HTTP/1.1" 200 -
+2025-03-05 09:32:57,254 INFO     20 POST http://es01:9200/ragflow_ca473450f67211efae920242ac120006/_search [status:200 duration:0.007s]
+2025-03-05 09:32:57,258 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:57] "GET /v1/kb/13b9c436f7cc11efa2e20242ac120006/knowledge_graph HTTP/1.1" 200 -
+2025-03-05 09:32:58,994 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:58] "GET /v1/user/info HTTP/1.1" 200 -
+2025-03-05 09:32:58,997 INFO     20 172.18.0.6 - - [05/Mar/2025 09:32:58] "GET /v1/kb/list?page=1&page_size=30&keywords= HTTP/1.1" 200 -
+2025-03-05 09:33:00,850 INFO     20 172.18.0.6 - - [05/Mar/2025 09:33:00] "GET /v1/user/tenant_info HTTP/1.1" 200 -
+2025-03-05 09:33:00,851 INFO     20 172.18.0.6 - - [05/Mar/2025 09:33:00] "GET /v1/kb/detail?kb_id=5cf759aef7dd11ef9aa80242ac120006 HTTP/1.1" 200 -
+2025-03-05 09:33:00,853 INFO     20 HEAD http://es01:9200/ragflow_ca473450f67211efae920242ac120006 [status:200 duration:0.006s]
+2025-03-05 09:33:00,854 INFO     20 172.18.0.6 - - [05/Mar/2025 09:33:00] "GET /v1/document/list?kb_id=5cf759aef7dd11ef9aa80242ac120006&keywords=&page_size=10&page=1 HTTP/1.1" 200 -
+2025-03-05 09:33:00,916 INFO     20 POST http://es01:9200/ragflow_ca473450f67211efae920242ac120006/_search [status:200 duration:0.011s]
+2025-03-05 09:33:00,919 INFO     20 172.18.0.6 - - [05/Mar/2025 09:33:00] "GET /v1/kb/5cf759aef7dd11ef9aa80242ac120006/knowledge_graph HTTP/1.1" 200 -
+2025-03-05 09:33:02,313 INFO     20 172.18.0.6 - - [05/Mar/2025 09:33:02] "GET /v1/user/info HTTP/1.1" 200 -
+2025-03-05 09:33:02,321 INFO     20 172.18.0.6 - - [05/Mar/2025 09:33:02] "GET /v1/kb/list?page=1&page_size=30&keywords= HTTP/1.1" 200 -
+2025-03-05 09:33:03,307 INFO     20 172.18.0.6 - - [05/Mar/2025 09:33:03] "GET /v1/user/tenant_info HTTP/1.1" 200 -
+2025-03-05 09:33:03,316 INFO     20 HEAD http://es01:9200/ragflow_ca473450f67211efae920242ac120006 [status:200 duration:0.005s]
+2025-03-05 09:33:03,343 INFO     20 172.18.0.6 - - [05/Mar/2025 09:33:03] "GET /v1/kb/detail?kb_id=c7442da2f7db11efaf490242ac120006 HTTP/1.1" 200 -
+2025-03-05 09:33:03,347 INFO     20 172.18.0.6 - - [05/Mar/2025 09:33:03] "GET /v1/document/list?kb_id=c7442da2f7db11efaf490242ac120006&keywords=&page_size=10&page=1 HTTP/1.1" 200 -
+2025-03-05 09:33:03,380 INFO     20 POST http://es01:9200/ragflow_ca473450f67211efae920242ac120006/_search [status:200 duration:0.007s]
+2025-03-05 09:33:03,382 INFO     20 172.18.0.6 - - [05/Mar/2025 09:33:03] "GET /v1/kb/c7442da2f7db11efaf490242ac120006/knowledge_graph HTTP/1.1" 200 -
+2025-03-05 09:33:04,500 INFO     20 172.18.0.6 - - [05/Mar/2025 09:33:04] "GET /v1/user/info HTTP/1.1" 200 -
+2025-03-05 09:33:04,505 INFO     20 172.18.0.6 - - [05/Mar/2025 09:33:04] "GET /v1/kb/list?page=1&page_size=30&keywords= HTTP/1.1" 200 -
+2025-03-05 09:33:08,939 INFO     20 172.18.0.6 - - [05/Mar/2025 09:33:08] "GET /v1/user/info HTTP/1.1" 200 -
+2025-03-05 09:33:08,942 INFO     20 172.18.0.6 - - [05/Mar/2025 09:33:08] "GET /v1/kb/list?page=1&page_size=30&keywords= HTTP/1.1" 200 -
